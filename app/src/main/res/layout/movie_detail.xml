@@ -1,0 +1,177 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8eaf6"
+    android:fillViewport="false"
+    android:nestedScrollingEnabled="true"
+    android:onClick="setContentView"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.abhilash.popularmovies.MovieDetailActivity">
+
+    <!--#ff00897b-->
+    <RelativeLayout
+        android:id="@+id/detail_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff00897b"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="center_vertical"
+
+                android:textColor="#ffeceff1"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:text="sdf"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear1"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/picassoImage"
+                android:layout_width="185dp"
+                android:layout_height="278dp"
+                android:layout_weight="3"
+                android:src="@drawable/settings" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/release"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_weight="1.8"
+                    android:text="Release date"
+                    android:textColor="#1A237E"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="3"
+                    android:text="Rating"
+                    android:textColor="#1A237E"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/favBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="0.20"
+                    android:background="#ff00897b"
+                    android:text="Set FAV"
+                    android:textColor="#eceff1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear2"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/Title_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:focusableInTouchMode="false"
+                android:text="About"
+                android:textColor="#1A237E"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Title_about"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:gravity="start"
+                android:text="Here is about the Movie"
+                android:textColor="#3F51B5"
+                android:textIsSelectable="false"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/tra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/about"
+                android:layout_marginTop="5dp"
+                android:text="Trailer"
+                android:textColor="#1A237E"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tra"
+                android:layout_marginTop="5dp"
+
+
+                >
+
+            </ListView>
+
+            <TextView
+                android:id="@+id/rev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list"
+                android:layout_marginTop="5dp"
+                android:text="Review"
+                android:textColor="#1A237E"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/list_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rev"
+                android:layout_marginTop="5dp"
+                android:clipToPadding="false">
+
+            </ListView>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
